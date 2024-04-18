@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(155, 225, 231);
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+/* nav {
+    float: left;
+    width: 30%;
+    background: #8c58a1;
+    padding: 20px;
+  }
+  
+  <!-- Style the list inside the menu -->
+  nav ul {
+    list-style-type:none;
+    padding: 0;
+  } */
