@@ -1,0 +1,25 @@
+/* chatbot style start */
+/* .chat-icon {
+    position: fixed;
+    right: 30px;
+    bottom: 0;
+    font-size: 8opx;
+    color: black;
+    cursor: pointer;
+    z-index: 1000;
+}
+.chat-box {
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    width: 400px;
+    height: 75vh;
+    bottom: 5;
+    background-color: #243980;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    transform: scaleY();
+}
+.chat_box.active {
+    transform: scaleY(1);
+} */

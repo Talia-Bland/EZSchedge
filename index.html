@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Chatbot</title>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-messages"></div>
+        <input type="text" id="user-input">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById('user-input').value;
+            displayMessage(userInput, true);
+
+            // Send user input to backend server (not implemented in this example)
+            // The backend server will interact with OpenAI's API and send back the response
+
+            // For demonstration purposes, just echoing the user input as the bot's response
+            var botResponse = "You said: " + userInput;
+            displayMessage(botResponse, false);
+        }
+
+        function displayMessage(message, isUser) {
+            var chatMessages = document.getElementById('chat-messages');
+            var messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            if (isUser) {
+                messageElement.classList.add('user-message');
+            } else {
+                messageElement.classList.add('bot-message');
+            }
+            chatMessages.appendChild(messageElement);
+        }
+    </script>
+</body>
+</html>

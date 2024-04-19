@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>EZSchedge: Home Page</title>    
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+        <link href = "daySchedule_style.css" rel = "stylesheet">
+        
+        <!-- link for a different font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,300">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400&family=Finger+Paint&display=swap">
+
+        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="css/basic-template.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+        <!-- chatbot -->
+        <script type = "text/javascript" src = "js/jquery-3.1.1.min.js"></script>
+        <script type = "text/javascript" src = "js/daySchedule_js.js"></script>
+        
+    </head>
+
+    <style>
+        body {
+            font-family: "Barlow Condensed";
+        }
+        #chat-response {
+            background-color: #8bd884;
+        }
+        #human-response {
+            background-color: #cac6c6;
+            text-align: right;
+        }
+    </style>
+
+    <body style = "background-color: #8b94e7;">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md text-black fixed-top justify-content-between navbar-light" style = "background-color: #c4a052;">
+            <div class="container-fluid">
+                <a class = "navbar-brand" href = "home.html"><img src = "logo.png" width = "55" height = "55" class = "d inline-block align-top rounded-pill">EZSchedge</a>
+                <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navbarTogglerCollapsible" aria-expanded = "false" aria-label = "Toggle Navigation">
+                    <span class = "navbar-toggler-icon"></span>
+                </button>
+
+                <div class = "collapse navbar-collapse" id = "navbarTogglerCollapsible">
+                    <div class = "navbar-nav nav-tabs">
+                        <a class = "nav-item nav-link" href = "homepage.html">Home</a>
+                        <a class = "nav-item nav-link" href = "todoList.html">To-Do-List <span class = "sr-only"></span></a>
+                        <a class = "nav-item nav-link" href = "assignments.html">Assignments</a>
+                        <!-- <a class = "nav-item nav-link" href = "importantEvents.html">Important Events</a> -->
+                        <a class = "nav-item nav-link active" style = "background-color: #8bd884;" href = "daySchedule.html">Day Schedule</a>
+                        <a class = "nav-item nav-link" href = "weekSchedule.html">Week Schedule</a>
+                    </div>
+                </div> 
+            </div>
+        </nav>
+
+        <div class = "mt-5"></div>
+        <br><br><br>
+
+        <div class = "container col text-center text-black mb-3" style = "max-width: 900px;">
+            <div class = "mb-3 col">
+                <img src = "day.gif" class = "img-fluid rounded d-block w-100">
+            </div>
+        </div>
+
+        <div class = "container col text-center text-black mb-3" style = "max-width: 900px;">
+            <div class = "mb-3 col">
+                <h1 class = "rounded row text-center text-black d-flex justify-content-center"><b>Use EZSchedge to Make Your Day Scheduling Easier</b></h1>
+            </div>
+        </div>
+
+        <!-- sample chatbot input and output -->
+        <div class = "container col d-flex justify-content-center">
+            <div class = "card mt-5">
+                <div class = "d-flex flex-row justify-content-between p-3 adiv text-black">
+                    <i class = fas fa-chevron-left></i>
+                    <span class = "pb-3" style = "font-size: 200%;"><b>EZSchedge</b></span>
+                    <i class = "fas fa-times"></i>
+                </div>
+                <div class = "d-flex flex-row p-3" id = "chat-response">
+                    <img src = "chatbot.png" width = "30" height = "30">
+                    <div class = "chat m1-2 p-3">Hello, there and welcome to EZSchedge! What would you like for me to do?</div>
+                </div>
+                <div class = "d-flex flex-row p-3 justify-content-end" id = "human-response">
+                    <img src = "humanpic.png" width = "40" height = "40">
+                    <div class = "mr-2 p-3"><span class = "text-muted">I would like your help in scheduling my day.</span></div>
+                </div>
+                <div class = "d-flex flex-row p-3" id = "chat-response">
+                    <img src = "chatbot.png" width = "30" height = "30">
+                    <div class = "chat m1-2 p-3">First, tell me what you have to do for the day, and we will go from there.</div>
+                </div>
+                <div class = "d-flex flex-row p-3 justify-content-end" id = "human-response">
+                    <img src = "humanpic.png" width = "40" height = "40">
+                    <div class = "mr-2 p-3"><span class = "text-muted">Well on Monday, I have a test in Calculus I, and also on Monday, I have a test in Discrete Mathematics.
+                        Then, I have an essay for my English 101 class due on that same Monday at 5:00pm, which is right after my Discrete Mathematics class. How would I manage that?
+                    </span></div>
+                </div>
+                <div class = "d-flex flex-row p-3" id = "chat-response">
+                    <img src = "chatbot.png" width = "30" height = "30">
+                    <div class = "chat m1-2 p-3"><p>Well for one, make sure that you equally divided the studying for both subjects. If you feel more confident for Calculus I, 
+                        study more for Discrete Mathematics and vice versa.</p><p>Then, try to complete your essay during the weekened so that you're not stressing yourself
+                            on Monday last minute.<p>If it's not possible for you to complete your essay over the weekend, try communicating with your professor about your 
+                                situation to see if they'll be lenient toward you.<p>Please let me know if there's anything else that I can do for you.</p>
+                            </p>
+                        </p>
+                    </div>
+                </div>
+                <div class = "d-flex flex-row p-3 justify-content-end" id = "human-response">
+                    <img src = "humanpic.png" width = "40" height = "40">
+                    <div class = "mr-2 p-3"><span class = "text-muted">That would be all. Thank you!
+                    </span></div>
+                </div>
+                <div class = "d-flex flex-row p-3" id = "chat-response">
+                    <img src = "chatbot.png" width = "30" height = "30">
+                    <div class = "chat m1-2 p-3">Of course! <b>EZSchedge</b> is here to simplify your college journey.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- chatbox -->
+        <div class = "container mt-5">
+            <!-- <h1 style = "color: white">ChatBot</h1> -->
+            <!-- <div class = "chat-box mt-3"> -->
+                <!-- chat messages will be addedd here dynamically -->
+            <!-- </div> -->
+            <div class = "form-group mt-3">
+                <textarea class = "form-control" rows = "1" placeholder = "Enter Your Message" autocapitalize = "words"></textarea>
+            </div>
+            <button type = "button" class = "btn" id = "send-btn" buttin-2addon></button>
+        </div>
+        <!-- chatbot end -->
+ 
+        <!-- sample schedule -->
+        
+
+        <!-- footer -->
+        <div class = "col">
+            <footer class = "text-center text-black" style = "background-color: #c4a052;">
+                <!-- grid container -->
+                <div class = "container-fluid">
+                    <!-- tab links -->
+                    <section class = "mt-5">
+                        <!-- grid row -->
+                        <div class = "row text-center d-flex justify-content-center pt-5">
+                            <!-- grid column -->
+                            <div class = "col-md-2">
+                                <h5 class = "font-weight-bold">
+                                    <a href = "homepage.html" class = "text-black link-offset-2 link-underline link-underline-opacity-0">Home</a>
+                                </h5>
+                            </div>
+                            <!-- grid column -->
+                            <div class = "col-md-2">
+                                <!-- text-uppercase -->
+                                <h5 class = "font-weight-bold">
+                                    <a href = "todoList.html" class = "text-black link-offset-2 link-underline link-underline-opacity-0">To-Do-List</a>
+                                </h5>
+                            </div>
+                            <div class = "col-md-2">
+                                <h5 class = "font-weight-bold">
+                                    <a href = "assignments.html" class = "text-black link-offset-2 link-underline link-underline-opacity-0">Assignments</a>
+                                </h5>
+                            </div>
+                            <!-- <div class = "col-md-2">
+                                <h5 class = "font-weight-bold">
+                                    <a href = "importantEvents.html" class = "text-black link-offset-2 link-underline link-underline-opacity-0">Important Events</a>
+                                </h5>
+                            </div> -->
+                            <div class = "col-md-2">
+                                <h5 class = "font-weight-bold">
+                                    <a href = "daySchedule.html" class = "text-black link-offset-2 link-underline link-underline-opacity-0">Day Schedule</a>
+                                </h5>
+                            </div>
+                            <div class = "col-md-2">
+                                <h5 class = "font-weight-bold">
+                                    <a href = "weekSchedule.html" class = "text-black link-offset-2 link-underline link-underline-opacity-0">Week Schedule</a>
+                                </h5>
+                            </div>
+                            <!-- end grid row -->
+                        </div>
+                        <!-- end tab links -->
+                    </section>
+                </div>
+                <hr class = "my-3">
+
+                <div class = "text-center p-5" style = "background-color: #c4a052; font-size: large;">
+                    <a class = "navbar-brand" href = "homepage.html"><img src = "logo.png" width = "50" height = "50" class = "d inline-block align-top rounded-pill"></a>
+                    EZSchedge | © 2024 Copyright
+                </div>
+
+            </footer>
+        </div>
+
+        <script>
+            setInterval(highlightAll,1000);
+            // Function to highlight code using highlight.js library
+            function highlightAll() {
+            document.querySelectorAll("pre code").forEach(block => {
+                hljs.highlightBlock(block);
+            });
+            }
+
+                const chatBox = document.querySelector(".chat-box");
+                const messageInput = document.querySelector("#message-input");
+                const sendBtn = document.querySelector("#send-btn");
+
+                function addMessage(message, isUserMessage) {
+                const messageDiv = document.createElement("div");
+                messageDiv.classList.add("mt-3", "p-3", "rounded");
+
+                if (isUserMessage) {
+                    messageDiv.classList.add("user-message");
+
+                } else {
+                    messageDiv.classList.add("bot-message");
+                }
+
+                messageDiv.innerHTML = `
+                    <img src="{{ url_for('static', filename='images/user.png') }}" class="user-icon"><p>${message}</p>
+                    `;
+
+                chatBox.appendChild(messageDiv);
+                chatBox.scrollTop = chatBox.scrollHeight;
+                }
+
+
+
+
+                function sendMessage() {
+                const message = messageInput.value.trim();
+
+                if (message !== "") {
+                    addMessage(message, true);
+
+                    fetch("/api", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ message })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                                messageInput.value = "";
+                        const messageDiv = document.createElement("div");
+                        messageDiv.classList.add("mt-3", "p-3", "rounded");
+                        messageDiv.classList.add("bot-message");
+                    
+                        const content = data.content;
+                        
+                        // Check if the content has code block
+                        const hasCodeBlock = content.includes("```");
+                        if (hasCodeBlock) {
+                        // If the content has code block, wrap it in a <pre><code> element
+                        const codeContent = content.replace(/```([\s\S]+?)```/g, '</p><pre><code>$1</code></pre><p>');
+
+                        
+                        messageDiv.innerHTML = `<img src="{{ url_for('static', filename='images/gpt.jpg') }}" class="bot-icon"><p>${codeContent}</p>`
+                        
+                        }
+                        else{
+                        messageDiv.innerHTML = `<img src="{{ url_for('static', filename='images/gpt.jpg') }}" class="bot-icon"><p>${content}</p>`
+                        }
+                        chatBox.appendChild(messageDiv);
+                        chatBox.scrollTop = chatBox.scrollHeight;
+
+                    })
+                    .catch(error => console.error(error));
+                }
+                }
+
+                
+                sendBtn.addEventListener("click", sendMessage);
+                messageInput.addEventListener("keydown", event => {
+                if (event.keyCode === 13 && !event.shiftKey) {
+                    event.preventDefault();
+                    sendMessage();
+                }
+                });
+        </script>
+
+    </body>
+</html>
