@@ -1,0 +1,25 @@
+{
+    "userMessages": [
+        ["Hi", "Hello", "Hey"],
+        ["Sure", "Yes", "No", "Maybe"],
+        ["What is this chatbot for?", "What are you designed to do?", "What is this chatbot designed for?"],
+        ["Where can you add tasks to the to-do-list?"],
+        ["What can I put in my schedule in for the week?"],
+        ["What assignments do I have due?", "What assignment is due in the next two days?"],
+        ["Where are my tests and quizzes located?", "Where can I find my current day schedule?", "What is my current schedule for the week?"],
+        ["How do I navigate the to-do-list?"]
+    ],
+
+    "botReplies": [
+        ["Hello there!", "Hey", "Hello", "Hi!"],
+        ["Okay", "Okay, what can I help you with?", "Okay, what would you like help with?"],
+        ["Yes", "No", "Maybe", "Sure", "Not possible"],
+        ["You can add tasks to the to-list by clicking this button here ->", "You can add tasks to the to-do-list by clicking the to-do-list tab and clicking the 'Add Task' button."],
+        ["You can put in your assignments due in the current and following weeks such as ->"],
+        ["You can view your current assignments due by clicking here ->", "Currently, you have [number] assignments due."],
+        ["You can access your tests and quizzes by clicking here ->", "Your tests and quizzes can be accessed by clicking the tests and quizzes tab."],
+        ["Your current day schedule can be found by clicking here ->"],
+        ["To navigate the to-do-list, you must first..."]
+    ]
+}
+
